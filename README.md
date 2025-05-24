@@ -1,0 +1,1 @@
+# Authors-Articles-and-Magazines-system-model
