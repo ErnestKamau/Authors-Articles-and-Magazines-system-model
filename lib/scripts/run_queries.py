@@ -1,11 +1,24 @@
 from lib.models import Author, Article, Magazine
 from lib.db.connection import get_connection
+from lib.controllers.__init__ import add_author_with_articles
+
 
 conn = get_connection()
 cursor = conn.cursor()
 
 
 def run():
+    articles = [
+        {"title": "12 Keys to Write Senior-Level Tests"},
+        {"title": "Passwords have problems, but passkeys have more"}
+        ]
+    magazines = [
+        {"name": "Tech Advisor", "category": "Technology"},
+        {"name": "2600: The Hacker Quarterly", "category": "Technology"}
+    ]
+    add_author_with_articles("Adrian Githae", articles, magazines)
+    
+    
     author = Author.find_by_id(1)
     magazine = Magazine.find_by_id(1)
     article = Article.find_by_id(1)
