@@ -38,6 +38,8 @@ class Article:
             article = cls(row[1], row[2], row[3])
             article.id = row[0]
             article.title = row[1]
+            article.author_id = row[2]
+            article.magazine_id = row[3]
             
             cls.all[article.id] = article
         return article
