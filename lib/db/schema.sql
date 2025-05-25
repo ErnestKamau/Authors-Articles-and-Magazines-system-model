@@ -1,3 +1,5 @@
+DROP TABLE magazines;
+
 CREATE TABLE IF NOT EXISTS authors (
     id INTEGER PRIMARY KEY,
     name VARCHAR(255) NOT NULL
@@ -19,12 +21,4 @@ CREATE TABLE IF NOT EXISTS articles (
     FOREIGN KEY (author_id) REFERENCES authors(id),
     FOREIGN KEY (magazine_id) REFERENCES magazines(id)
 );
-
-
-
-
-
-
-
-
 

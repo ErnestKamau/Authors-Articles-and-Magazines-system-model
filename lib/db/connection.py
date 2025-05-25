@@ -5,5 +5,3 @@ def get_connection():
     CONN.row_factory = sqlite3.Row
     return CONN
 
-
-
