@@ -11,7 +11,7 @@ class Author:
     
     def __init__(self, name, id=None):
         self.id = id
-        self.name = name
+        self._name = name
          
         
     def __repr__(self):

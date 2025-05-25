@@ -6,22 +6,22 @@ cursor = conn.cursor()
 
 
 def run():
-    # author = Author.find_by_id(1)
+    author = Author.find_by_id(1)
     magazine = Magazine.find_by_id(1)
     article = Article.find_by_id(1)
     
-    # if author:
-    #     print(f"Author: {author.name}")
+    if author:
+        print(f"Author: {author.name}")
         
-    #     print("Magazines:")
-    #     for mag in author.magazines():
-    #         print(f"- {mag.name} ({mag.category})")
+        print("Magazines:")
+        for mag in author.magazines():
+            print(f"- {mag.name} ({mag.category})")
 
-    #     print("Topic Areas:")
-    #     print(author.topic_areas())
+        print("Topic Areas:")
+        print(author.topic_areas())
 
-    # else:
-    #     print("Author not found.")
+    else:
+        print("Author not found.")
         
     if magazine:
         print(magazine)
@@ -41,9 +41,11 @@ def run():
     if article:
         print(article)
         
+        print(article.magazines())
+        
     
         
-        
+
 
 if __name__ == "__main__":
     run()
