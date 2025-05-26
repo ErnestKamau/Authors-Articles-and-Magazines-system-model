@@ -8,11 +8,11 @@ cursor = conn.cursor()
 
 
 def run():
-    articles = [
-        {"title": "12 Keys to Write Senior-Level Tests"},
-        {"title": "Passwords have problems, but passkeys have more"}
-        ]
-    add_author_with_articles("Adrian Githae", articles)
+    # articles = [
+    #     {"title": "12 Keys to Write Senior-Level Tests"},
+    #     {"title": "Passwords have problems, but passkeys have more"}
+    #     ]
+    # add_author_with_articles("Adrian Githae", articles)
     
    
     author = Author.find_by_id(1)
