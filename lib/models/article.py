@@ -52,7 +52,14 @@ class Article:
         row = cursor.execute(sql, (id,)).fetchone()
         return cls.instance_from_db(row) if row else None 
     
-      
+    @classmethod
+    def find_by_title(cls, title):
+        sql = "SELECT * FROM articles WHERE title = ?"
+        row = cursor.execute(sql, (title,)).fetchone()
+        
+        return cls.instance_from_db(row) if row else None
+    
+     
     @classmethod
     def all_articles(cls):
         sql = "SELECT * FORM articles"
