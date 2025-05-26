@@ -8,7 +8,6 @@ It is a simple Python backend application that models the relationship between A
 
 
 ## ⚙️ Setup Instructions
-Choose one of the following environments:
 
 ### Using Pipenv (Install dependencies)
 - pipenv install pytest sqlite3
