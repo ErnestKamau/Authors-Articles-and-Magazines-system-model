@@ -18,13 +18,13 @@ def run():
     ]
     add_author_with_articles("Adrian Githae", articles, magazines)
     
-    
+   
     author = Author.find_by_id(1)
     magazine = Magazine.find_by_id(1)
     article = Article.find_by_id(1)
     
     if author:
-        print(f"Author: {author.name}")
+        print (author.name)
         
         print("Magazines:")
         for mag in author.magazines():
